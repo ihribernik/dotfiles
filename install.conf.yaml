@@ -50,6 +50,7 @@
 
   - python3 -m pip install --user 
     autopep8 
+    black
     flake8 
     httpie 
     pep8 
