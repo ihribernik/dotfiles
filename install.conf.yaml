@@ -1,23 +1,60 @@
 - clean: ['~']
-- link: {
-        ~/.gitconfig: dotfiles/git/.gitconfig,
-        ~/.tmux.conf: dotfiles/tmux/.tmux.conf,
-        ~/.editorconfig: dotfiles/.editorconfig,
-        ~/.config/nvim: dotfiles/nvim
-}
 - create: 
-        - ~/dev/personal
-        - ~/dev/work
+  - ~/dev/personal
+  - ~/dev/work
+  - ~/.config
+  - ~/.local/bin
+
+- link: {
+
+  ~/.gitconfig: dotfiles/git/.gitconfig,
+  ~/.tmux.conf: dotfiles/tmux/.tmux.conf,
+  ~/.editorconfig: dotfiles/.editorconfig,
+  ~/.config/nvim: dotfiles/nvim,
+}
 - shell:
-        - sudo apt install -y bat
-        - python3 -m pip install --user \
-          pylint \
-          pep8 \
-          autopep8 \
-          flake8 \
-          httpie \
-          pgcli \
-          virtualenv \
-          vanity \
-          wheel \
-          setuptools
+  - sudo apt install -y 
+    ack-grep
+    apt-transport-https 
+    bat
+    build-essential  
+    ca-certificates 
+    curl 
+    exfat-fuse 
+    fzf 
+    git 
+    git-core 
+    git-doc 
+    git-man 
+    gparted 
+    hfsplus 
+    hfsutils 
+    htop 
+    ideviceinstaller 
+    ifuse 
+    iotop 
+    ipheth-utils 
+    jq 
+    libavcodec-extra 
+    mtp-tools 
+    ntfs-3g 
+    python3-dev 
+    python3-pip 
+    python3-venv 
+    screen 
+    software-properties-common
+    tmux 
+    vim 
+    # docker-ce
+
+  - python3 -m pip install --user 
+    autopep8 
+    flake8 
+    httpie 
+    pep8 
+    pgcli 
+    pylint 
+    setuptools
+    vanity 
+    virtualenv 
+    wheel 
