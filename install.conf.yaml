@@ -1,3 +1,23 @@
-- clean: []
-- link: {}
-- shell: []
+- clean: ['~']
+- link: {
+        ~/.gitconfig: dotfiles/git/.gitconfig,
+        ~/.tmux.conf: dotfiles/tmux/.tmux.conf,
+        ~/.editorconfig: dotfiles/.editorconfig,
+        ~/.config/nvim: dotfiles/nvim
+}
+- create: 
+        - ~/dev/personal
+        - ~/dev/work
+- shell:
+        - sudo apt install -y bat
+        - python3 -m pip install --user \
+          pylint \
+          pep8 \
+          autopep8 \
+          flake8 \
+          httpie \
+          pgcli \
+          virtualenv \
+          vanity \
+          wheel \
+          setuptools

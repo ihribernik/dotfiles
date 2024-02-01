@@ -1,0 +1,9 @@
+# propt to see git prompt and pythons things
+export GIT_PS1_SHOWDIRTYSTATE=true      # staged '+', unstaged '*'
+export GIT_PS1_SHOWUNTRACKEDFILES=true  # '%' untracked files
+export GIT_PS1_SHOWUPSTREAM="auto"      # '<' behind, '>' ahead, '<>' diverged, '=' no difference
+export GIT_PS1_SHOWSTASHSTATE=true      # '$' something is stashed
+export GIT_PS1_SHOWCOLORHINTS=true
+export PRE_PROMPT="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]"
+export POST_PROMPT="\\\$ "
+export PROMPT_COMMAND='if [[ -n "$VIRTUAL_ENV" ]]; then __git_ps1 "[$(basename $VIRTUAL_ENV)] $PRE_PROMPT" " $POST_PROMPT"; else __git_ps1 "$PRE_PROMPT" " $POST_PROMPT"; fi'
