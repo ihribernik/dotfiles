@@ -1,0 +1,24 @@
+- clean: ["~"]
+
+- create:
+  - ~/dev/personal
+  - ~/dev/work
+  - ~/.config
+  - ~/.local/bin
+
+- link: {
+  ~/.gitconfig: dotfiles/git/.gitconfig,
+  ~/.tmux.conf: dotfiles/tmux/.tmux.conf,
+  ~/.editorconfig: dotfiles/.editorconfig,
+  ~/.config/nvim: dotfiles/nvim,
+  ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1: dotfiles/powershell/user_profile.ps1,
+}
+
+- shell:
+  - winget install --id Microsoft.Powershell --source winget --silent
+  - winget install --id Git.Git -e --source winget --silent
+  - Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+  - scoop install curl jq delta bat neovim gcc nvm less sudo
+  - Install-Module posh-git -Scope CurrentUser -Force
+  - scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+  - Install-Module -Name Terminal-icons -Repository PSGallery -Force
