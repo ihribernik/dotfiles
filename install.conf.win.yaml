@@ -12,7 +12,8 @@
   ~/.editorconfig: dotfiles/.editorconfig,
   ~/.config/nvim: dotfiles/nvim,
   ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1: dotfiles/powershell/user_profile.ps1,
-  ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json: dotfiles/win-terminal/settings.json
+  ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json: dotfiles/win-terminal/settings.json,
+  ~/.ackrc: dotfiles/.ackrc
 }
 
 - shell:
@@ -36,4 +37,3 @@
     virtualenv
     wheel
     climage
-
