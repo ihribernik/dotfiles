@@ -1,4 +1,6 @@
--- if true then return {} end
+if true then
+  return {}
+end
 
 return -- Lazy
 {
@@ -7,7 +9,7 @@ return -- Lazy
   priority = 1000, -- Ensure it loads first
   opts = {
     options = {
-      transparency = true,
+      transparency = false,
       terminal_colors = true,
     },
   },

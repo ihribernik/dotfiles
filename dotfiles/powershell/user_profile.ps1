@@ -9,9 +9,6 @@ oh-my-posh init pwsh --config $theme | Invoke-Expression
 # Icons
 Import-Module -Name Terminal-Icons
 
-# Alias
-Set-Alias vim nvim
-
 # Utilities
 function which($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
