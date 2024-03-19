@@ -5,6 +5,8 @@
 --ignore-dir=.venv
 --ignore-dir=env
 --ignore-dir=venv
+--ignore-dir=.anvil-data
+--ignore-dir=.mypy_cache
 --ignore-ack-defaults
 
 # Vue
