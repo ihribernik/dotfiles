@@ -2,6 +2,9 @@
     name = Ivan Hribernik
     email = cihribernik@gmail.com
 
+[includeIf "gitdir:~/dev/work/"]
+    path = ~/.gitconfig_work
+
 [alias]
     co = checkout
     l = log --color --graph --pretty=format:'%Cgreen%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C("#849598")<%an>%Creset' --abbrev-commit
