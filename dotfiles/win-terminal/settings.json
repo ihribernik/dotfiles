@@ -52,7 +52,7 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "Hurmit Nerd Font Mono"
+                "face": "JetBrains Mono"
             },
             "intenseTextStyle": "bright",
             "opacity": 98,
@@ -91,12 +91,6 @@
                 "hidden": false,
                 "name": "Ubuntu",
                 "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": true,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
