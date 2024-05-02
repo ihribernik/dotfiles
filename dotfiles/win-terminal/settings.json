@@ -52,7 +52,7 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "JetBrains Mono"
+                "face": "JetBrainsMono Nerd Font"
             },
             "intenseTextStyle": "bright",
             "opacity": 98,
