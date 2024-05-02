@@ -2,7 +2,7 @@
 Import-Module posh-git
 $personalFolder = $ExecutionContext.InvokeCommand.ExpandString('$home\powershell')
 $themesFolder = $ExecutionContext.InvokeCommand.ExpandString('$home\AppData\Local\Programs\oh-my-posh\themes')
-$themeFile = "gruvbox.omp.json"
+$themeFile = "zash.omp.json"
 $theme = Join-Path $themesFolder $themeFile
 oh-my-posh init pwsh --config $theme | Invoke-Expression
 
