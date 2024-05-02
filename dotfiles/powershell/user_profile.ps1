@@ -29,6 +29,10 @@ function Touch-File() {
     }
 }
 
+function use-debug(){
+    New-Item -Path Env:\DEBUG -Value '1'
+}
+
 ### Creando un alias para touch
 
 # Checar si el alias touch existe
