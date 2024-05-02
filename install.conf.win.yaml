@@ -37,3 +37,4 @@
     virtualenv
     wheel
     climage
+  - oh-my-posh font install --user JetBrainsMono
