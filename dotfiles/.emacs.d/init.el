@@ -36,3 +36,38 @@
 
 ;; Make the current line more subtle by highlighting the current line.
 (hl-line-mode)
+
+(display-time-mode 1)
+(display-battery-mode 1)
+
+;; using straight for package manage
+
+;; https://github.com/raxod502/straight.el/issues/757#issuecomment-839764260
+(defvar comp-deferred-compilation-deny-list ())
+
+;; https://github.com/raxod502/straight.el#getting-started
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(straight-use-package 'use-package)
+
+(setq straight-use-package-by-default t)
+
+(use-package diminish
+  :straight t)
+
+(use-package editorconfig
+  :straight t
+  :disabled t
+  :hook ((prog-mode . editorconfig-mode))
+  :diminish editorconfig-mode)
