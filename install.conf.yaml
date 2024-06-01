@@ -4,7 +4,7 @@
       create: true
       force: true
 
-- create: 
+- create:
   - ~/dev/personal
   - ~/dev/work
   - ~/.config
@@ -19,25 +19,38 @@
 }
 
 - shell:
-  - sudo apt install -y 
+  - sudo apt install -y
     ack-grep
-    apt-transport-https 
+    apt-transport-https
     bat
-    build-essential  
-    ca-certificates 
-    curl 
+    build-essential
+    ca-certificates
+    curl
     fd-find
-    fzf 
-    git 
-    git-core 
-    git-doc 
-    git-man 
-    htop 
-    jq 
-    python3-dev 
-    python3-pip 
-    python3-venv 
+    fzf
+    git
+    git-core
+    git-doc
+    git-man
+    htop
+    jq
+    python3-dev
+    python3-pip
+    python3-venv
     ripgrep
-    screen 
-    tmux 
-    vim 
+    screen
+    tmux
+    vim
+  - python3 -m pip install --user
+    autopep8
+    black
+    flake8
+    httpie
+    pep8
+    pgcli
+    pylint
+    setuptools
+    vanity
+    virtualenv
+    wheel
+    climage
