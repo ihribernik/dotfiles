@@ -49,6 +49,7 @@
     pep8
     pgcli
     pylint
+    pyright
     setuptools
     vanity
     virtualenv
