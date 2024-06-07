@@ -49,11 +49,8 @@
    file-style = bold yellow ul
    file-decoration-style = none
 
-# [http]
-# 	sslVerify = false
-
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [core]
     ignorecase = false
