@@ -21,8 +21,7 @@ config.keys = {
 }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	-- TODO: this can change in the future to pwsh or something
-	config.default_prog = { "C:/Program Files/Git/bin/bash.exe -i -l" }
+	config.default_prog = { "pwsh" }
 end
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { italic = false })
