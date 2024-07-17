@@ -3,7 +3,7 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
   -- stylua: ignore
-  print("cloning repo")
+  print("cloning lazyvim repo...")
   vim.fn.system({
     "git",
     "clone",
