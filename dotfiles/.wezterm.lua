@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 config.default_prog = { "bash" }
 -- config.color_scheme = "One Dark (Gogh)"
 config.audible_bell = "Disabled"
-config.font_size = 12
+config.font_size = 10
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.85
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
