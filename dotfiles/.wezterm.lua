@@ -6,6 +6,8 @@ local config = wezterm.config_builder()
 
 config.default_prog = { "bash" }
 -- config.color_scheme = "One Dark (Gogh)"
+config.color_scheme = 'Night Owl (Gogh)'
+
 config.audible_bell = "Disabled"
 config.font_size = 10
 config.hide_tab_bar_if_only_one_tab = true
