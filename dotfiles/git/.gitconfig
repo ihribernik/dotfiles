@@ -1,6 +1,6 @@
 [user]
-    name = Ivan Hribernik
-    email = cihribernik@gmail.com
+	name = Ivan Hribernik
+	email = cihribernik@gmail.com
 
 [alias]
     co = checkout
