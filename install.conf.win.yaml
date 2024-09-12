@@ -20,6 +20,7 @@
   ~/.ackrc: dotfiles/.ackrc,
   ~/.emacs.d: dotfiles/.emacs.d,
   ~/.wezterm.lua: dotfiles/.wezterm.lua,
+  ~/.gitconfig_work: dotfiles/git/.gitconfig_work
 }
 
 - shell:
