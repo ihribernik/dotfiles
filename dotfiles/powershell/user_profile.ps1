@@ -1,9 +1,8 @@
 # Prompt
 Import-Module posh-git
-$personalFolder = $ExecutionContext.InvokeCommand.ExpandString('$home\powershell')
-$themesFolder = $ExecutionContext.InvokeCommand.ExpandString('$home\AppData\Local\Programs\oh-my-posh\themes')
-$themeFile = "zash.omp.json"
-$theme = Join-Path $themesFolder $themeFile
+$personalFolder = $ExecutionContext.InvokeCommand.ExpandString('$home\dev\personal\ihribernik_dotfiles\dotfiles\powershell')
+$themeFile = "personal.omp.json"
+$theme = Join-Path $personalFolder $themeFile
 oh-my-posh init pwsh --config $theme | Invoke-Expression
 
 # Icons
@@ -12,7 +11,7 @@ Import-Module -Name Terminal-Icons
 # Utilities
 function which($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
-      Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
 
@@ -29,7 +28,7 @@ function Touch-File() {
     }
 }
 
-function use-debug(){
+function use-debug() {
     New-Item -Path Env:\DEBUG -Value '1'
 }
 
