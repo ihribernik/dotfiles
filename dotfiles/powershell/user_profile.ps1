@@ -1,7 +1,21 @@
 # Prompt
 Import-Module posh-git
 $personalFolder = $ExecutionContext.InvokeCommand.ExpandString('$home\dev\personal\ihribernik_dotfiles\dotfiles\powershell')
-$themeFile = "personal.omp.json"
+$dark_theme = "personal.omp.json"
+$light_theme = "personal_light.omp.json"
+$themeFile = ""
+$currentMode = Get-ItemPropertyValue -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme
+
+if ($currentMode -eq 1) {
+    # If currently in Light Mode
+    $themeFile = $light_theme
+}
+else {
+    # If currently in Dark Mode
+    $themeFile = $dark_theme
+}
+
+
 $theme = Join-Path $personalFolder $themeFile
 oh-my-posh init pwsh --config $theme | Invoke-Expression
 
@@ -15,7 +29,7 @@ function which($command) {
 }
 
 
-function Touch-File() {
+function touch() {
     $fileName = $args[0]
     # Comprobar si el archivo existe
     if (-not(Test-Path $fileName)) {
@@ -30,11 +44,4 @@ function Touch-File() {
 
 function use-debug() {
     New-Item -Path Env:\DEBUG -Value '1'
-}
-
-### Creando un alias para touch
-
-# Checar si el alias touch existe
-if (-not(Test-Path -Path Alias:Touch)) {
-    New-Alias -Name Touch Touch-File -Force
 }
