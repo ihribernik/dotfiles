@@ -36,6 +36,7 @@
     black
     flake8
     httpie
+    litecli
     pep8
     pgcli
     pylint
