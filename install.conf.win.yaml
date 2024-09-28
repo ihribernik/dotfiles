@@ -45,4 +45,3 @@
     virtualenv
     wheel
     climage
-  - winget install wez.wezterm
