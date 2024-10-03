@@ -1,0 +1,10 @@
+---
+- name: update and install requirements for work
+  hosts: localhost
+
+  tasks:
+    - name: Ensure SO is updated.
+      ansible.builtin.apt:
+        update_cache: true
+        upgrade: true
+  user: ihribernik
