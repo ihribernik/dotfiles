@@ -1,4 +1,10 @@
 ;; -*- lexical-binding: t; -*-
+(add-to-list 'load-path "~/.emacs.d/modules") ;; TODO: do it dinamic
+
+(require 'ih-package-manager)
+(require 'ih-hooks)
+(require 'ih-ui)
+(require 'ih-lang)
 
 ;; The default is 800 kilobytes. Measured in bytes.
 (setq gc-cons-threshold (* 50 1000 1000))
