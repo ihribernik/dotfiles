@@ -1,5 +1,7 @@
 ;; -*- lexical-binding: t; -*-
 (add-to-list 'load-path "~/.emacs.d/modules") ;; TODO: do it dinamic
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
 (require 'ih-package-manager)
 (require 'ih-hooks)
@@ -26,19 +28,13 @@
 (line-number-mode)
 (column-number-mode)
 (global-display-line-numbers-mode)
-
-
-;; The following snippet will change some settings only when running in a
-;; graphical environment.  It will include removing some window elements
-;; that are not necessary at all (such as the toolbars), and it will also
-;; set the font.
-
 ;; commented for learning
 
-;; (when window-system
-;;   (tool-bar-mode -1)
-;;   (menu-bar-mode -1)
-;;   (scroll-bar-mode -1))
+(when window-system
+  (tool-bar-mode -1)
+  (menu-bar-mode -1)
+  (scroll-bar-mode -1)
+  (tab-bar-mode 1))
 
 ;; Make the current line more subtle by highlighting the current line.
 (hl-line-mode)
