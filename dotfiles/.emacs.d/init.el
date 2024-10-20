@@ -1,7 +1,9 @@
 ;; -*- lexical-binding: t; -*-
 (add-to-list 'load-path "~/.emacs.d/modules") ;; TODO: do it dinamic
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(when (file-exists-p custom-file)
+  (load custom-file))
 
 (require 'ih-package-manager)
 (require 'ih-hooks)
