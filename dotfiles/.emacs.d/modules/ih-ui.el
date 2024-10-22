@@ -1,10 +1,9 @@
 (message "Loading ih-ui.el ...")
 
-(use-package doom-themes
-  :ensure t)
+(use-package one-themes
+  :init
+  (load-theme 'one-dark t))
 
-;; change this theme for another
-(load-theme 'doom-molokai)
-
+(hl-line-mode)
 
 (provide 'ih-ui)
