@@ -13,16 +13,15 @@ insert_final_newline = false
 indent_style = space
 indent_size = 4
 
-[**/*.{ts,json,js,tsx,jsx}]
-indent_style = space
-indent_size = 2
-
-
 [*.[jt]sx]
 indent_style = space
 indent_size = 2
 
 [*.html]
+indent_style = space
+indent_size = 2
+
+[*.json]
 indent_style = space
 indent_size = 2
 
