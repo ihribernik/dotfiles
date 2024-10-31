@@ -16,7 +16,8 @@
   ~/.editorconfig: dotfiles/.editorconfig,
   ~/.config/nvim: dotfiles/nvim,
   ~/.ackrc: dotfiles/.ackrc,
-  ~/.gitconfig_work: dotfiles/git/.gitconfig_work
+  ~/.gitconfig_work: dotfiles/git/.gitconfig_work,
+  ~/.bash_aliases: dotfiles/bash/.bash_aliases
 }
 
 - shell:
@@ -32,3 +33,4 @@
   - python3 -m pip install --user
     autopep8 black flake8 httpie pep8 pgcli litecli
     pylint pyright setuptools vanity virtualenv wheel climage
+  - PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
