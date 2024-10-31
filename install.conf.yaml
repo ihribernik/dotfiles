@@ -17,7 +17,9 @@
   ~/.config/nvim: dotfiles/nvim,
   ~/.ackrc: dotfiles/.ackrc,
   ~/.gitconfig_work: dotfiles/git/.gitconfig_work,
-  ~/.bash_aliases: dotfiles/bash/.bash_aliases
+  ~/.bash_aliases: dotfiles/bash/.bash_aliases,
+  ~/.bashrc: dotfiles/bash/.bashrc,
+  ~/.bash_personal: dotfiles/bash/.bash_personal,
 }
 
 - shell:

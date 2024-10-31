@@ -1,3 +1,6 @@
+alias open='xdg-open'
+alias pcrun="pre-commit run --all-files"
+
 if [ -x "$(command -v batcat)" ]; then
 	alias bat="batcat"
 	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
@@ -9,55 +12,4 @@ fi
 
 if [ -x "$(command -v vim)" ]; then
 	export EDITOR=vim
-fi
-
-alias open='xdg-open'
-
-alias pcrun="pre-commit run --all-files"
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-	if [ -f /usr/share/bash-completion/bash_completion ]; then
-		. /usr/share/bash-completion/bash_completion
-	elif [ -f /etc/bash_completion ]; then
-		. /etc/bash_completion
-	fi
-fi
-
-# change fzf command for rg in vim
-if type rg &>/dev/null; then
-	export FZF_DEFAULT_COMMAND='rg --files'
-	export FZF_DEFAULT_OPTS='-m --height 50% --border'
-fi
-
-# loads nvm if its loaded
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-#  loads fzf keybinding
-if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
-	source /usr/share/doc/fzf/examples/key-bindings.bash
-fi
-
-if [ -f /usr/share/doc/fzf/examples/completion.bash ]; then
-	source /usr/share/doc/fzf/examples/completion.bash
-fi
-
-if [ -f /etc/profile.d/bash_completion.sh ]; then
-	source /etc/profile.d/bash_completion.sh
-fi
-
-if [ -f /usr/local/bin/aws_completer ]; then
-	complete -C '/usr/local/bin/aws_completer' aws
-fi
-
-if [ -x "$(command -v kubectl)" ]; then
-	source <(kubectl completion bash)
-fi
-
-if [ -f /home/ihribernik/dev/personal/alacritty/extra/completions/alacritty.bash ]; then
-	source /home/ihribernik/dev/personal/alacritty/extra/completions/alacritty.bash
 fi
