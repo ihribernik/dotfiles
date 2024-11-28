@@ -1,0 +1,28 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/ivan_/dev/" . "personal/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ 
+)
+
+;; ----- ido-work-file-list -----
+(
+ 
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/ivan_/dev/personal/" (26376 35630 0 0) "sample_flask/" "rick-and-morty-remix/" "portfolio/" "interest-tracker-front/" "interest-tracker/" "ihribernik-vault/" "ihribernik-dotfiles/" "fastapi-vue/" "compilation-box/" "CabronCalc/" "backend-nodejs-challenge/" "../" "./")
+
+ ("c:/Users/ivan_/dev/" (26297 6702 0 0) "work/" "personal/" "desktop.ini" "../" "./")
+
+ ("c:/Users/ivan_/" (26388 30499 0 0) "_lesshst" "Zomboid/" "Videos/" "SendTo/" "Searches/" "scoop/" "Saved Games/" "Reciente/" "pseint/" "Plantillas/" "Pictures/" "OneDrive/" "ntuser.ini" "NTUSER.DAT{9d340f75-e92f-11ee-99e4-7cc2c635d616}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{9d340f75-e92f-11ee-99e4-7cc2c635d616}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{9d340f75-e92f-11ee-99e4-7cc2c635d616}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "npm-cache/" "Music/" "Mis documentos/" "Menú Inicio/" "Links/" "Impresoras/" "go/" "Favorites/" "Entorno de red/" "Dropbox/" "Downloads/" "Documents/" "dev/" "Desktop/" "Datos de programa/" "Cookies/" "Contacts/" "Configuración local/" "AppData/" "ansel/" "AMD_RyzenMaster_Uninstall.log" "AMD_RyzenMaster.log" "AMDRM_Install.log" ".wezterm.lua" ".vscode/" ".viminfo" ".tmux.conf" ".swt/" ".ssh/" ".QtWebEngineProcess/" ".node_repl_history" ".logseq/" ".local/" ".lesshst" ".ipython/" ".gk/" ".gitconfig_work" ".gitconfig" ".git-for-windows-updater" ".emacs.d/" ".editorconfig" ".dotnet/" ".docker/" ".czrc" ".config/" ".cache/" ".bash_history" ".azuredatastudio/" ".ackrc" ".3T/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
