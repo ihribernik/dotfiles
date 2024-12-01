@@ -37,3 +37,5 @@
     pylint pyright setuptools vanity virtualenv wheel climage
   - PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
   - ./scripts/minikube.sh
+  - ./scripts/kubectl.sh
+  - ./scripts/nvim.sh
