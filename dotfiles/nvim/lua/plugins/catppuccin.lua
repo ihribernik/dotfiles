@@ -15,7 +15,7 @@ return {
         -- 	shade = "dark",
         -- 	percentage = 0.15, -- percentage of the shade to apply to the inactive window
         -- },
-        transparent_background = true,
+        -- transparent_background = true,
 
         no_italic = true,
         no_bold = false,
