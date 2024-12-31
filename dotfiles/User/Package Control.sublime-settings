@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"EditorConfig",
+		"FileIcons",
+		"GitGutter",
+		"isort",
+		"LSP",
+		"LSP-eslint",
+		"LSP-gopls",
+		"LSP-json",
+		"LSP-pylsp",
+		"LSP-pyright",
+		"LSP-typescript",
+		"Package Control",
+		"PackageDev",
+		"SideBarEnhancements",
+		"Terminus",
+	]
+}
