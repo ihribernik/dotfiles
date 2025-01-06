@@ -23,7 +23,7 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "juliana",
+        colorscheme = "catppuccin",
       },
     },
     -- import any extras modules here
