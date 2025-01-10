@@ -119,4 +119,3 @@ fi
 if [ -f ~/.bash_personal ]; then
   source ~/.bash_personal
 fi
-# . "$HOME/.cargo/env"
