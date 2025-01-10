@@ -17,14 +17,19 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -d "/usr/local/go/bin" ] && export PATH=$PATH:/usr/local/go/bin
 
-#  loads fzf keybinding
-if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
-	source /usr/share/doc/fzf/examples/key-bindings.bash
-fi
+[ -s "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
 
-if [ -f /usr/share/doc/fzf/examples/completion.bash ]; then
-	source /usr/share/doc/fzf/examples/completion.bash
-fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# #  loads fzf keybinding
+# if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
+# 	source /usr/share/doc/fzf/examples/key-bindings.bash
+# fi
+#
+# if [ -f /usr/share/doc/fzf/examples/completion.bash ]; then
+# 	source /usr/share/doc/fzf/examples/completion.bash
+# fi
 
 if [ -f /etc/profile.d/bash_completion.sh ]; then
 	source /etc/profile.d/bash_completion.sh
