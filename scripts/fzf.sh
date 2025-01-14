@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-cd ~/.fzf
-./install --all
+git clone git@github.com:junegunn/fzf.git $HOME/dev/personal/fzf
+cd $HOME/dev/personal/fzf
+sudo make clean
+sudo make install
