@@ -28,3 +28,7 @@ function touch() {
 function use-debug() {
     New-Item -Path Env:\DEBUG -Value '1'
 }
+
+function clear-history(){
+    Write-Output "" > (Get-PSReadlineOption).HistorySavePath
+}
