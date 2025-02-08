@@ -39,3 +39,5 @@
   - ./scripts/minikube.sh
   - ./scripts/kubectl.sh
   - ./scripts/nvim.sh
+  - ./scripts/fzf.sh
+  - ./scripts/golang.sh
