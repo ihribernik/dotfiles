@@ -6,7 +6,11 @@ return {
   branch = "regexp", -- Use this branch for the new version
   cmd = "VenvSelect",
   enabled = function()
-    return LazyVim.has("telescope.nvim")
+    if vim.g.LazyVim then
+    	return LazyVim.has("telescope.nvim")
+    else
+	    return false
+    end
   end,
   opts = {
     settings = {
