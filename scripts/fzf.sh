@@ -1,6 +1,9 @@
 #!/usr/bin/bash
 
-git clone git@github.com:junegunn/fzf.git $HOME/dev/personal/fzf
+if [ ! -d $HOME/dev/personal/fzf ]; then
+	git clone git@github.com:junegunn/fzf.git $HOME/dev/personal/fzf
+fi
+
 cd $HOME/dev/personal/fzf
 sudo make clean
-sudo make install
+sudo ./install --key-bindings --completion --no-bash
