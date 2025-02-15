@@ -32,9 +32,6 @@
   - curl -s https://api.github.com/repos/dandavison/delta/releases/latest
     | jq '.assets[] | select(.name | contains("musl") and endswith("deb")) | .browser_download_url'
     | xargs wget -O package.deb && sudo dpkg -i ./package.deb && rm ./package.deb
-  - python3 -m pip install --user
-    autopep8 black flake8 httpie pep8 pgcli litecli
-    pylint pyright setuptools vanity virtualenv wheel climage
   - PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
   - ./scripts/golang.sh
   - ./scripts/docker.sh

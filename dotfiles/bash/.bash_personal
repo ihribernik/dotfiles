@@ -22,15 +22,6 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# #  loads fzf keybinding
-# if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
-# 	source /usr/share/doc/fzf/examples/key-bindings.bash
-# fi
-#
-# if [ -f /usr/share/doc/fzf/examples/completion.bash ]; then
-# 	source /usr/share/doc/fzf/examples/completion.bash
-# fi
-
 if [ -f /etc/profile.d/bash_completion.sh ]; then
 	source /etc/profile.d/bash_completion.sh
 fi
