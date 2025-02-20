@@ -9,6 +9,7 @@
   - ~/dev/work
   - ~/.config
   - ~/.local/bin
+  - ~/.fonts
 
 - link: {
   ~/.gitconfig: dotfiles/git/.gitconfig,
@@ -20,6 +21,7 @@
   ~/.bash_aliases: dotfiles/bash/.bash_aliases,
   ~/.bashrc: dotfiles/bash/.bashrc,
   ~/.bash_personal: dotfiles/bash/.bash_personal,
+  ~/.fonts/firacode: fonts/firacode,
 }
 
 - shell:
