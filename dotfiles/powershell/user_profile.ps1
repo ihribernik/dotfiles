@@ -5,6 +5,9 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\space.omp.json" | Invoke-Ex
 # Icons
 Import-Module -Name Terminal-Icons
 
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+
 # Utilities
 function which($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |

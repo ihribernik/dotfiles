@@ -27,8 +27,9 @@
   - winget install --id Microsoft.Powershell --source winget --silent
   - winget install --id Git.Git -e --source winget --silent
   - Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-  - scoop install curl jq delta bat neovim gcc nvm less sudo ack ripgrep fd
+  - scoop install curl jq delta bat neovim gcc nvm less sudo ack ripgrep fd fzf
   - Install-Module posh-git -Scope CurrentUser -Force
+  - Install-Module PSFzf -Scope CurrentUser -Force
   - scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
   - Install-Module -Name Terminal-icons -Repository PSGallery -Force
   - python -m pip install --user
