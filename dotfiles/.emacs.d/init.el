@@ -6,6 +6,7 @@
   (load custom-file))
 
 (require 'ih-package-manager)
+(require 'ih-packages)
 (require 'ih-hooks)
 (require 'ih-ui)
 (require 'ih-lang)
@@ -23,23 +24,3 @@
 (setq make-backup-files nil
       auto-save-default nil)
 (setq vc-follow-symlinks nil)
-;; whitespaces
-(setq whitespace-style '(empty face lines-tail tabs trailing))
-
-;; Line numbers in modeline
-(line-number-mode)
-(column-number-mode)
-(global-display-line-numbers-mode)
-;; commented for learning
-
-(when window-system
-  (tool-bar-mode -1)
-  (menu-bar-mode -1)
-  (scroll-bar-mode -1)
-  (tab-bar-mode 1))
-
-;; Make the current line more subtle by highlighting the current line.
-(hl-line-mode)
-
-(display-time-mode 1)
-(display-battery-mode 1)
