@@ -54,6 +54,7 @@
             ],
             "colorScheme": "Campbell",
             "cursorShape": "filledBox",
+            "elevate": true,
             "experimental.retroTerminalEffect": false,
             "font": 
             {
