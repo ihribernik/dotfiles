@@ -14,6 +14,11 @@
   :ensure t
   :commands lsp-ui-mode)
 
+(projectile-mode +1)
+
+;; Recommended keymap prefix on Windows/Linux
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))

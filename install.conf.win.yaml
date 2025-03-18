@@ -28,6 +28,7 @@
   - winget install --id Git.Git -e --source winget --silent
   - winget install --id JanDeDobbeleer.OhMyPosh -s winget --silent
   - winget install --id chocolatey.chocolatey --source winget
+  - winget install --id Kubernetes.minikube --source winget
   - choco install curl jq delta bat neovim mingw nvm less sudo ack ripgrep fd fzf gh
   - Install-Module posh-git -Scope CurrentUser -Force
   - Install-Module PSFzf -Scope CurrentUser -Force

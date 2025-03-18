@@ -54,12 +54,12 @@
             ],
             "colorScheme": "Campbell",
             "cursorShape": "filledBox",
-            "elevate": true,
+            "elevate": false,
             "experimental.retroTerminalEffect": false,
             "font": 
             {
                 "face": "JetBrainsMono Nerd Font",
-                "size": 10
+                "size": 12
             },
             "intenseTextStyle": "bright",
             "opacity": 92,
