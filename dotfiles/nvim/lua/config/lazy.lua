@@ -23,7 +23,7 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "vscode",
+        colorscheme = "monokai-nightasty",
       },
     },
     -- import any extras modules here
@@ -52,7 +52,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax", "juliana" } },
+  install = { colorscheme = { "tokyonight" } },
   checker = {
     enabled = false,
     notify = false,
