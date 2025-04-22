@@ -37,6 +37,7 @@
   - winget install --id sharkdp.bat
   - winget install --id jqlang.jq
   - winget install --id CoreyButler.NVMforWindows
+  - winget install --id LLVM.LLVM --source winget
   - Install-Module posh-git -Scope CurrentUser -Force
   - Install-Module PSFzf -Scope CurrentUser -Force
   - Install-Module -Name Terminal-icons -Repository PSGallery -Force

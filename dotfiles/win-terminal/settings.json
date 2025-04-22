@@ -137,6 +137,30 @@
                 "hidden": false,
                 "name": "Git Bash",
                 "source": "Git"
+            },
+            {
+                "guid": "{b7d0ed48-53bf-5e73-944d-3f01a4b9a9a6}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{fd48b120-5ee5-54fd-af96-a0babed37bbd}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{561ac265-51e0-5c1c-964b-e075a7d8d067}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{fd11fad6-4aa1-51e9-bfee-30298cbad63f}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
