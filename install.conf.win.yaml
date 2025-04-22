@@ -20,7 +20,8 @@
   ~/.ackrc: dotfiles/.ackrc,
   ~/.emacs.d: dotfiles/.emacs.d,
   ~/.gitconfig_work: dotfiles/git/.gitconfig_work,
-  ~/AppData/Roaming/Sublime Text 3/Packages/User: dotfiles/User/
+  ~/AppData/Roaming/Sublime Text 3/Packages/User: dotfiles/User/,
+  ~/.wezterm.lua: dotfiles/.wezterm.lua
 }
 
 - shell:
@@ -38,6 +39,8 @@
   - winget install --id jqlang.jq
   - winget install --id CoreyButler.NVMforWindows
   - winget install --id LLVM.LLVM --source winget
+  - winget install --id sharkdp.fd --source winget
+  - winget install --id wez.wezterm --source winget
   - Install-Module posh-git -Scope CurrentUser -Force
   - Install-Module PSFzf -Scope CurrentUser -Force
   - Install-Module -Name Terminal-icons -Repository PSGallery -Force
