@@ -5,42 +5,44 @@
       force: true
 
 - create:
-  - ~/dev/personal
-  - ~/dev/work
-  - ~/.config
-  - ~/.local/bin
-  - ~/.fonts
+    - ~/dev/personal
+    - ~/dev/work
+    - ~/.config
+    - ~/.local/bin
+    - ~/.fonts
 
-- link: {
-  ~/.gitconfig: dotfiles/git/.gitconfig,
-  ~/.tmux.conf: dotfiles/tmux/.tmux.conf,
-  ~/.editorconfig: dotfiles/.editorconfig,
-  ~/.config/nvim: dotfiles/nvim,
-  ~/.ackrc: dotfiles/.ackrc,
-  ~/.gitconfig_work: dotfiles/git/.gitconfig_work,
-  ~/.bash_aliases: dotfiles/bash/.bash_aliases,
-  ~/.bashrc: dotfiles/bash/.bashrc,
-  ~/.bash_personal: dotfiles/bash/.bash_personal,
-  ~/.fonts/firacode: fonts/firacode,
-  ~/.fonts/JetBrainsMono: fonts/JetBrainsMono,
-}
+- link:
+    ~/.gitconfig: dotfiles/git/.gitconfig
+    ~/.tmux.conf: dotfiles/tmux/.tmux.conf
+    ~/.editorconfig: dotfiles/.editorconfig
+    ~/.config/nvim: dotfiles/nvim
+    ~/.ackrc: dotfiles/.ackrc
+    ~/.gitconfig_work: dotfiles/git/.gitconfig_work
+    ~/.bash_aliases: dotfiles/bash/.bash_aliases
+    ~/.bashrc:
+        force: true
+        create: true
+        path: dotfiles/bash/.bashrc
+    ~/.bash_personal: dotfiles/bash/.bash_personal
+    ~/.fonts/firacode: fonts/firacode
+    ~/.fonts/JetBrainsMono: fonts/JetBrainsMono
 
 - shell:
-  - sudo apt-get update && sudo apt-get upgrade -y
-  - sudo apt-get install -y
-    ack-grep apt-transport-https bat build-essential ca-certificates
-    clang curl fd-find git git-core git-doc git-man
-    htop jq python3-dev python3-pip python3-venv ripgrep screen
-    tmux vim xclip
-  - curl -s https://api.github.com/repos/dandavison/delta/releases/latest
-    | jq '.assets[] | select(.name | contains("musl") and endswith("deb")) | .browser_download_url'
-    | xargs wget -O package.deb && sudo dpkg -i ./package.deb && rm ./package.deb
-  - PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
-  - ./scripts/golang.sh
-  - ./scripts/docker.sh
-  - ./scripts/minikube.sh
-  - ./scripts/kubectl.sh
-  - ./scripts/nvim.sh
-  - ./scripts/fzf.sh
-  - ./scripts/rustup.sh
-  - fc-cache -fv # TODO: add a .sh file to use this and the commands above
+    - sudo apt-get update && sudo apt-get upgrade -y
+    - sudo apt-get install -y
+      ack-grep apt-transport-https bat build-essential ca-certificates
+      clang curl fd-find git git-core git-doc git-man
+      htop jq python3-dev python3-pip python3-venv ripgrep screen
+      tmux vim xclip
+    - curl -s https://api.github.com/repos/dandavison/delta/releases/latest
+      | jq '.assets[] | select(.name | contains("musl") and endswith("deb")) | .browser_download_url'
+      | xargs wget -O package.deb && sudo dpkg -i ./package.deb && rm ./package.deb
+    - PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
+    - ./scripts/golang.sh
+    - ./scripts/docker.sh
+    - ./scripts/minikube.sh
+    - ./scripts/kubectl.sh
+    - ./scripts/nvim.sh
+    - ./scripts/fzf.sh
+    - ./scripts/rustup.sh
+    - fc-cache -fv # TODO: add a .sh file to use this and the commands above
