@@ -22,6 +22,7 @@
   ~/.bashrc: dotfiles/bash/.bashrc,
   ~/.bash_personal: dotfiles/bash/.bash_personal,
   ~/.fonts/firacode: fonts/firacode,
+  ~/.fonts/JetBrainsMono: fonts/JetBrainsMono,
 }
 
 - shell:
@@ -42,3 +43,4 @@
   - ./scripts/nvim.sh
   - ./scripts/fzf.sh
   - ./scripts/rustup.sh
+  - fc-cache -fv # TODO: add a .sh file to use this and the commands above
