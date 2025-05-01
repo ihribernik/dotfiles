@@ -26,6 +26,7 @@
     ~/.bash_personal: dotfiles/bash/.bash_personal
     ~/.fonts/firacode: fonts/firacode
     ~/.fonts/JetBrainsMono: fonts/JetBrainsMono
+    ~/.logseq: dotfiles/.logseq
 
 - shell:
     - sudo apt-get update && sudo apt-get upgrade -y
