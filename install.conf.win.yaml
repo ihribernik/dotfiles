@@ -21,26 +21,25 @@
   ~/.emacs.d: dotfiles/.emacs.d,
   ~/.gitconfig_work: dotfiles/git/.gitconfig_work,
   ~/AppData/Roaming/Sublime Text 3/Packages/User: dotfiles/User/,
-  ~/.wezterm.lua: dotfiles/.wezterm.lua
+  ~/.wezterm.lua: dotfiles/.wezterm.lua,
+  ~/.logseq: dotfiles/.logseq,
 }
 
 - shell:
-  - winget install --id Microsoft.Powershell --source winget --silent
-  - winget install --id Git.Git -e --source winget --silent
-  - winget install --id JanDeDobbeleer.OhMyPosh -s winget --silent
-  - winget install --id Kubernetes.minikube --source winget
-  - winget install --id Microsoft.PowerToys --source winget
-  - winget install --id Neovim.Neovim --source winget
-  - winget install BurntSushi.ripgrep.MSVC
-  - winget install fzf
-  - winget install --id GitHub.cli
-  - winget install --id dandavison.delta
-  - winget install --id sharkdp.bat
-  - winget install --id jqlang.jq
-  - winget install --id CoreyButler.NVMforWindows
-  - winget install --id LLVM.LLVM --source winget
-  - winget install --id sharkdp.fd --source winget
-  - winget install --id wez.wezterm --source winget
+  - winget install --id Microsoft.Powershell --source winget --silent --ignore-warnings
+  - winget install --id Git.Git -e --source winget --silent --ignore-warnings
+  - winget install --id JanDeDobbeleer.OhMyPosh --source winget --silent --ignore-warnings
+  - winget install --id Kubernetes.minikube --source winget --silent --ignore-warnings
+  - winget install --id Microsoft.PowerToys --source winget --silent --ignore-warnings
+  - winget install --id BurntSushi.ripgrep.MSVC --source winget --silent --ignore-warnings
+  - winget install --id fzf --source winget --silent --ignore-warnings
+  - winget install --id GitHub.cli --source winget --silent --ignore-warnings
+  - winget install --id dandavison.delta --source winget --silent --ignore-warnings
+  - winget install --id sharkdp.bat --source winget --silent --ignore-warnings
+  - winget install --id jqlang.jq --source winget --silent --ignore-warnings
+  - winget install --id LLVM.LLVM --source winget --silent --ignore-warnings
+  - winget install --id sharkdp.fd --source winget --silent --ignore-warnings
+  - winget install --id wez.wezterm --source winget --silent --ignore-warnings
   - Install-Module posh-git -Scope CurrentUser -Force
   - Install-Module PSFzf -Scope CurrentUser -Force
   - Install-Module -Name Terminal-icons -Repository PSGallery -Force
