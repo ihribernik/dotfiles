@@ -22,7 +22,6 @@
   ~/.gitconfig_work: dotfiles/git/.gitconfig_work,
   ~/AppData/Roaming/Sublime Text 3/Packages/User: dotfiles/User/,
   ~/.wezterm.lua: dotfiles/.wezterm.lua,
-  ~/.logseq: dotfiles/.logseq,
 }
 
 - shell:
