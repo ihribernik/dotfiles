@@ -1,0 +1,73 @@
+{
+  "name": "Poimandres",
+  "author": "Adaptado de drcmda para Sublime Text",
+  "variables": {
+    "background": "#1B1E28",
+    "foreground": "#E6E6E6",
+    "comment": "#5A6376",
+    "string": "#5DE4C7",
+    "number": "#ADD7FF",
+    "keyword": "#89DDFF",
+    "function": "#FFD580",
+    "type": "#F087BD",
+    "constant": "#FFCB6B",
+    "tag": "#89DDFF"
+  },
+  "globals": {
+    "background": "var(background)",
+    "foreground": "var(foreground)",
+    "caret": "var(foreground)",
+    "block_caret": "var(foreground)",
+    "line_highlight": "#212432",
+    "selection": "#2E3244",
+    "selection_border": "#3A3F5A",
+    "inactive_selection": "#1F2330",
+    "guide": "#3B3F51",
+    "active_guide": "#5A6376",
+    "stack_guide": "#3B3F51"
+  },
+  "rules": [
+    {
+      "scope": "comment",
+      "foreground": "var(comment)",
+      "font_style": "italic"
+    },
+    {
+      "scope": "string",
+      "foreground": "var(string)"
+    },
+    {
+      "scope": "constant.numeric",
+      "foreground": "var(number)"
+    },
+    {
+      "scope": "keyword",
+      "foreground": "var(keyword)",
+      "font_style": "bold"
+    },
+    {
+      "scope": "entity.name.function",
+      "foreground": "var(function)"
+    },
+    {
+      "scope": "storage.type, storage.modifier",
+      "foreground": "var(type)"
+    },
+    {
+      "scope": "constant.language, constant.character, constant.other",
+      "foreground": "var(constant)"
+    },
+    {
+      "scope": "entity.name.tag, support.class.component",
+      "foreground": "var(tag)"
+    },
+    {
+      "scope": "variable, variable.other",
+      "foreground": "var(foreground)"
+    },
+    {
+      "scope": "meta.embedded, source.groovy.embedded",
+      "background": "#2A2D40"
+    }
+  ]
+}
