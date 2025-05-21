@@ -12,7 +12,7 @@ end
 
 function get_color_scheme()
 	local appearance = get_appearance()
-	local color_scheme = 'Poimandres'
+	local color_scheme = 'Chalk'
 
 	if not appearance:find('Dark') then
 		color_scheme = 'Builtin Solarized Light'
