@@ -5,8 +5,10 @@
 	],
 	"index_files": true,
 	"light_theme": "Default.sublime-theme",
-	"dark_theme": "Adaptive.sublime-theme",
+	"dark_theme": "Default Dark.sublime-theme",
 	"font_face": "JetBrainsMono NF Regular",
-	"color_scheme": "pmndrs.sublime-color-scheme",
-	"theme": "Adaptive.sublime-theme",
+	// "color_scheme": "pmndrs.sublime-color-scheme",
+	"caret_style": "smooth",
+	"font_size": 12,
+	"theme": "auto",
 }
