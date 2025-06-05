@@ -1,3 +1,8 @@
+if true then
+  return {}
+end
+
+
 local colors = {
   bg = "#000000",
   fg = "#bbc2cf",
