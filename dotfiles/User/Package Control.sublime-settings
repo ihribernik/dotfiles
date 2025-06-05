@@ -1,22 +1,24 @@
 {
 	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
-	"installed_packages":
-	[
-		"AdvancedNewFile",
+	"in_process_packages": [],
+	"installed_packages": [
+		"AutoProjects",
 		"EditorConfig",
 		"FileIcons",
 		"GitGutter",
 		"isort",
 		"LSP",
+		"LSP-dockerfile",
 		"LSP-eslint",
 		"LSP-gopls",
+		"LSP-html",
 		"LSP-json",
 		"LSP-pylsp",
 		"LSP-pyright",
+		"LSP-R",
+		"LSP-tailwindcss",
 		"LSP-typescript",
+		"LSP-yaml",
 		"Package Control",
 		"PackageDev",
 		"SideBarEnhancements",

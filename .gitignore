@@ -2,3 +2,4 @@
 .idea/**
 *.tar.gz
 dotfiles/.emacs.d/org-persist
+.sublime/
