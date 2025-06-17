@@ -31,7 +31,7 @@
   - winget install --id Kubernetes.minikube --source winget --silent --ignore-warnings
   - winget install --id Microsoft.PowerToys --source winget --silent --ignore-warnings
   - winget install --id BurntSushi.ripgrep.MSVC --source winget --silent --ignore-warnings
-  - winget install --id fzf --source winget --silent --ignore-warnings
+  - winget install --id junegunn.fzf --source winget --silent --ignore-warnings
   - winget install --id GitHub.cli --source winget --silent --ignore-warnings
   - winget install --id dandavison.delta --source winget --silent --ignore-warnings
   - winget install --id sharkdp.bat --source winget --silent --ignore-warnings
