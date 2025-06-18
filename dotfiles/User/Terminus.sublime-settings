@@ -1,5 +1,7 @@
 {
 	"default_config": {
-		"windows": "PowerShell Core",
-	}
+		"linux": "Bash",
+		"osx": null,
+		"windows": "PowerShell Core"
+	},
 }
