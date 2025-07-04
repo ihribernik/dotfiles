@@ -3,3 +3,4 @@
 *.tar.gz
 dotfiles/.emacs.d/org-persist
 .sublime/
+env
