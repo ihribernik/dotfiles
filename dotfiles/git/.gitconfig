@@ -1,5 +1,5 @@
 [user]
-	name = Ivan Hribernik
+	uname = Ivan Hribernik
 	email = cihribernik@gmail.com
 
 [alias]
@@ -26,25 +26,6 @@
 
 [merge]
     conflictstyle = diff3
-
-[pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
-    blame = delta
-
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    features = line-numbers decorations
-    whitespace-error-style = 22 reverse
-
-[delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
 
 [init]
     defaultBranch = main
