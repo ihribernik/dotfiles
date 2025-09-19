@@ -38,11 +38,11 @@
       | jq '.assets[] | select(.name | contains("musl") and endswith("deb")) | .browser_download_url'
       | xargs wget -O package.deb && sudo dpkg -i ./package.deb && rm ./package.deb
     - PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
-    - ./scripts/golang.sh
-    - ./scripts/docker.sh
-    - ./scripts/minikube.sh
-    - ./scripts/kubectl.sh
-    - ./scripts/nvim.sh
-    - ./scripts/fzf.sh
-    - ./scripts/rustup.sh
+    - ./scripts/ubuntu/golang.sh
+    - ./scripts/ubuntu/docker.sh
+    - ./scripts/ubuntu/minikube.sh
+    - ./scripts/ubuntu/kubectl.sh
+    - ./scripts/ubuntu/nvim.sh
+    - ./scripts/ubuntu/fzf.sh
+    - ./scripts/ubuntu/rustup.sh
     - fc-cache -fv # TODO: add a .sh file to use this and the commands above
