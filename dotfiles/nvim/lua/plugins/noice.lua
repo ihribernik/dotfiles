@@ -2,8 +2,9 @@ return {
   "folke/noice.nvim",
   event = "VeryLazy",
   opts = {
-    cmdline = {
-      view = "cmdline",
-    },
+    messages = { enabled = false },
+    notify = { enabled = false },
+    popupmenu = { enabled = false },
+    cmdline = { enabled = false },
   },
 }
