@@ -1,6 +1,6 @@
 # Prompt
 Import-Module posh-git
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\space.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "space" | Invoke-Expression
 
 # Icons
 Import-Module -Name Terminal-Icons
