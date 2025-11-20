@@ -73,7 +73,7 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "FiraCode Nerd Font",
+                "face": "GoMono Nerd Font",
                 "size": 12
             },
             "intenseTextStyle": "bright",
