@@ -1,13 +1,3 @@
-# Prompt
-Import-Module posh-git
-oh-my-posh init pwsh --config "space" | Invoke-Expression
-
-# Icons
-Import-Module -Name Terminal-Icons
-
-Import-Module PSFzf
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
-
 # Utilities
 function which($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
@@ -36,7 +26,32 @@ function clear-history(){
     Write-Output "" > (Get-PSReadlineOption).HistorySavePath
 }
 
-#f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
+$IsInteractiveSession = ($Host.Name -eq 'ConsoleHost') -and
+    -not ([Environment]::GetCommandLineArgs() -contains '-Command')
 
-Import-Module -Name Microsoft.WinGet.CommandNotFound
-#f45873b3-b655-43a6-b217-97c00aa0db58
+if ($IsInteractiveSession) {
+    # Prompt
+    if (Get-Command git -ErrorAction SilentlyContinue) {
+        Import-Module posh-git -ErrorAction SilentlyContinue
+    }
+
+    if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
+        oh-my-posh init pwsh --config "space" | Invoke-Expression
+    }
+
+    # Icons
+    if (Get-Module -ListAvailable Terminal-Icons) {
+        Import-Module -Name Terminal-Icons -ErrorAction SilentlyContinue
+    }
+
+    if (Get-Module -ListAvailable PSFzf) {
+        Import-Module PSFzf -ErrorAction SilentlyContinue
+        Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+    }
+
+    if (Get-Module -ListAvailable Microsoft.WinGet.CommandNotFound) {
+        Import-Module -Name Microsoft.WinGet.CommandNotFound -ErrorAction SilentlyContinue
+    }
+
+}
+
