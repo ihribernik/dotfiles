@@ -26,6 +26,7 @@ function clear-history(){
     Write-Output "" > (Get-PSReadlineOption).HistorySavePath
 }
 
+
 $IsInteractiveSession = ($Host.Name -eq 'ConsoleHost') -and
     -not ([Environment]::GetCommandLineArgs() -contains '-Command')
 
@@ -53,5 +54,7 @@ if ($IsInteractiveSession) {
         Import-Module -Name Microsoft.WinGet.CommandNotFound -ErrorAction SilentlyContinue
     }
 
+    if (Get-Command lsd -ErrorAction SilentlyContinue) {
+        Set-Alias ls lsd
+    }
 }
-
