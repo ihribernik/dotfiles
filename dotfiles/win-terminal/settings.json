@@ -73,7 +73,7 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "DejaVuSansM Nerd Font",
+                "face": "JetBrainsMonoNL Nerd Font",
                 "size": 12
             },
             "intenseTextStyle": "bright",
