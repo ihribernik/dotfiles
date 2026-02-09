@@ -23,6 +23,10 @@
         create: true
         path: dotfiles/bash/.bashrc
     ~/.bash_personal: dotfiles/bash/.bash_personal
+    ~/.config/fish:
+        force: true
+        create: true
+        path: dotfiles/fish
 
 - shell:
     - sudo apt-get update
