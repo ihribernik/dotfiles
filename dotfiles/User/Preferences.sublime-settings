@@ -1,0 +1,18 @@
+{
+	"ignored_packages": [
+		"Vintage",
+	],
+	"index_files": true,
+	// "font_face": "JetBrainsMono NF",
+	"caret_style": "smooth",
+	"font_size": 12,
+	"light_theme": "Adaptive.sublime-theme",
+	"dark_theme": "Adaptive.sublime-theme",
+	"theme": "auto",
+	"color_scheme": "auto",
+	"default_font_size": 12,
+	"rulers": [
+		79,
+		80,
+	],
+}
