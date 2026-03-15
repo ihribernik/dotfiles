@@ -12,16 +12,12 @@
 
 - link: {
   ~/.gitconfig: dotfiles/git/.gitconfig,
-  ~/.tmux.conf: dotfiles/tmux/.tmux.conf,
   ~/.editorconfig: dotfiles/.editorconfig,
   ~/.config/nvim: dotfiles/nvim,
   ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1: dotfiles/powershell/user_profile.ps1,
   ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json: dotfiles/win-terminal/settings.json,
-  ~/.ackrc: dotfiles/.ackrc,
-  ~/.emacs.d: dotfiles/.emacs.d,
   ~/.gitconfig_work: dotfiles/git/.gitconfig_work,
   ~/AppData/Roaming/Sublime Text 3/Packages/User: dotfiles/User/,
-  ~/.wezterm.lua: dotfiles/.wezterm.lua,
 }
 
 - shell:
