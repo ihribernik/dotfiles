@@ -1,8 +1,8 @@
-$ErrorActionPreference = "Stop"
-
 param(
     [switch]$IncludeOptional
 )
+
+$ErrorActionPreference = "Stop"
 
 $BaseDir = $PSScriptRoot
 . (Join-Path $BaseDir "scripts/common/helpers.ps1")
