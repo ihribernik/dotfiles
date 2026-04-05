@@ -45,6 +45,7 @@ done
 dotfiles_install_link "${BASEDIR}/dotfiles/git/.gitconfig" "$HOME/.gitconfig"
 dotfiles_install_link "${BASEDIR}/dotfiles/git/.gitconfig_work" "$HOME/.gitconfig_work"
 dotfiles_install_link "${BASEDIR}/dotfiles/.editorconfig" "$HOME/.editorconfig"
+dotfiles_install_link "${BASEDIR}/dotfiles/.wezterm.lua" "$HOME/.wezterm.lua"
 dotfiles_install_link "${BASEDIR}/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
 dotfiles_install_link "${BASEDIR}/dotfiles/bash/.bash_aliases" "$HOME/.bash_aliases"
 dotfiles_install_link "${BASEDIR}/dotfiles/bash/.bash_personal" "$HOME/.bash_personal"

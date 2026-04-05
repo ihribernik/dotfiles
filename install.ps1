@@ -23,6 +23,7 @@ foreach ($dir in $coreDirs) {
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/git/.gitconfig") -Target (Join-Path $HOME ".gitconfig")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/git/.gitconfig_work") -Target (Join-Path $HOME ".gitconfig_work")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/.editorconfig") -Target (Join-Path $HOME ".editorconfig")
+Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/.wezterm.lua") -Target (Join-Path $HOME ".wezterm.lua")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/nvim") -Target (Join-Path $HOME ".config/nvim")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/powershell/user_profile.ps1") -Target (Join-Path $HOME ".config/powershell/user_profile.ps1")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/powershell/Microsoft.PowerShell_profile.ps1") -Target (Join-Path $HOME "Documents/PowerShell/Microsoft.PowerShell_profile.ps1")
