@@ -1,58 +1,75 @@
-Dotfiles Template
-=================
+Dotfiles
+========
 
-This is a template repository for bootstrapping your dotfiles with [Dotbot][dotbot].
+Cross-platform dotfiles for Ubuntu and Windows with a native installer flow.
 
-To get started, you can [create a new repository from this template][template]
-(or you can [fork][fork] this repository, if you prefer). You can probably
-delete this README and rename your version to something like just `dotfiles`.
+Principles
+----------
 
-In general, you should be using symbolic links for everything, and using git
-submodules whenever possible.
+- `bootstrap` installs software, not configs.
+- `install` installs configs, not software.
+- Existing files are backed up before replacement.
+- Reapplying the installer is safe.
+- Optional app-specific configs stay out of the default install path.
 
-To keep submodules at their proper versions, you could include something like
-`git submodule update --init --recursive` in your `install.conf.yaml`.
+Repository layout
+-----------------
 
-To upgrade your submodules to their latest versions, you could periodically run
-`git submodule update --init --remote`.
+- `bootstrap/ubuntu.sh`
+- `bootstrap/windows.ps1`
+- `install.sh`
+- `install.ps1`
+- `scripts/common/`
+- `scripts/ubuntu/verify.sh`
+- `scripts/windows/verify.ps1`
+- `dotfiles/`
+- `local/examples/`
 
-Inspiration
------------
+Install
+-------
 
-If you're looking for inspiration for how to structure your dotfiles or what
-kinds of things you can include, you could take a look at some repos using
-Dotbot.
+Ubuntu:
 
-* [anishathalye's dotfiles][anishathalye_dotfiles]
-* [csivanich's dotfiles][csivanich_dotfiles]
-* [m45t3r's dotfiles][m45t3r_dotfiles]
-* [alexwh's dotfiles][alexwh_dotfiles]
-* [azd325's dotfiles][azd325_dotfiles]
-* [wazery's dotfiles][wazery_dotfiles]
-* [thirtythreeforty's dotfiles][thirtythreeforty_dotfiles]
+```bash
+git clone <repo>
+cd dotfiles
+./bootstrap/ubuntu.sh
+./install.sh
+./scripts/ubuntu/verify.sh
+```
 
-And there are about [700 more here][dotbot-users].
+Windows:
 
-If you're using Dotbot and you'd like to include a link to your dotfiles here
-as an inspiration to others, please submit a pull request.
+```powershell
+git clone <repo>
+cd dotfiles
+.\bootstrap\windows.ps1
+.\install.ps1
+.\scripts\windows\verify.ps1
+```
+
+Optional configs
+----------------
+
+Optional configs are excluded by default.
+
+- Bash: `./install.sh --include-optional`
+- PowerShell: `.\install.ps1 -IncludeOptional`
+
+Today the optional set contains Sublime Text user settings from `dotfiles/User`.
+
+Backups
+-------
+
+When a managed target already exists and is not the expected link, it is moved to:
+
+```text
+~/.dotfiles-backups/<timestamp>/
+```
+
+PowerShell uses the matching location under the user profile home directory.
 
 License
 -------
 
-This software is hereby released into the public domain. That means you can do
-whatever you want with it without restriction. See `LICENSE.md` for details.
-
-That being said, I would appreciate it if you could maintain a link back to
-Dotbot (or this repository) to help other people discover Dotbot.
-
-[dotbot]: https://github.com/anishathalye/dotbot
-[fork]: https://github.com/anishathalye/dotfiles_template/fork
-[template]: https://github.com/anishathalye/dotfiles_template/generate
-[anishathalye_dotfiles]: https://github.com/anishathalye/dotfiles
-[csivanich_dotfiles]: https://github.com/csivanich/dotfiles
-[m45t3r_dotfiles]: https://github.com/m45t3r/dotfiles
-[alexwh_dotfiles]: https://github.com/alexwh/dotfiles
-[azd325_dotfiles]: https://github.com/Azd325/dotfiles
-[wazery_dotfiles]: https://github.com/wazery/dotfiles
-[thirtythreeforty_dotfiles]: https://github.com/thirtythreeforty/dotfiles
-[dotbot-users]: https://github.com/anishathalye/dotbot/wiki/Users
+See `LICENSE.md`.
