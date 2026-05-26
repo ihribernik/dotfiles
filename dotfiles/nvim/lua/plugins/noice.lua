@@ -1,14 +1,15 @@
-if true then
-  return {}
-end
+local spec = {
+  "folke/noice.nvim",
+  event = "VeryLazy",
+  opts = {
+    cmdline = {
+      view = "cmdline",
+      format = {
+        search_down = { view = "cmdline" },
+        search_up = { view = "cmdline" },
+      },
+    },
+  },
+}
 
--- return {
---   "folke/noice.nvim",
---   event = "VeryLazy",
---   opts = {
---     messages = { enabled = false },
---     notify = { enabled = false },
---     popupmenu = { enabled = false },
---     cmdline = { enabled = false },
---   },
--- }
+return spec

@@ -1,4 +1,4 @@
-return {
+local tokioSpec = {
   "tokyonight.nvim",
   opts = {
     transparent = true,
@@ -8,3 +8,5 @@ return {
     },
   },
 }
+
+return tokioSpec

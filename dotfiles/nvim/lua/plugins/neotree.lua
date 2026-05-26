@@ -1,4 +1,4 @@
-return {
+local spec = {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
     window = {
@@ -6,3 +6,5 @@ return {
     },
   },
 }
+
+return spec
