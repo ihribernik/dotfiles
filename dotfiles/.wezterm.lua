@@ -7,6 +7,8 @@ config.audible_bell = "Disabled"
 config.font = wezterm.font("Hack Nerd Font")
 config.font_size = 14
 config.window_background_opacity = 0.9
+
+config.color_scheme = 'iTerm2 Default'
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
