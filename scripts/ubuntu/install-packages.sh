@@ -2,10 +2,35 @@
 
 set -euo pipefail
 
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 # shellcheck source=scripts/common/helpers.sh
 source "${BASEDIR}/scripts/common/helpers.sh"
+
+RUN_EXTRA_TOOLS="${RUN_EXTRA_TOOLS:-0}"
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --with-extras)
+            RUN_EXTRA_TOOLS=1
+            shift
+            ;;
+        -h|--help)
+            cat <<'EOF'
+Usage: ./scripts/ubuntu/install-packages.sh [--with-extras]
+
+Installs Ubuntu packages used by these dotfiles.
+
+Options:
+  --with-extras    Also run the optional language and tooling helpers.
+EOF
+            exit 0
+            ;;
+        *)
+            dotfiles_error "Unknown argument: $1"
+            ;;
+    esac
+done
 
 dotfiles_require_command sudo
 dotfiles_require_command apt-get
@@ -50,7 +75,7 @@ dotfiles_log "Installing base Ubuntu packages"
 sudo apt-get install -y "${packages[@]}"
 
 if [[ -x "${BASEDIR}/scripts/ubuntu/nvm_setup.sh" ]]; then
-    dotfiles_log "Running nvm bootstrap helper"
+    dotfiles_log "Running nvm helper"
     "${BASEDIR}/scripts/ubuntu/nvm_setup.sh"
 fi
 
@@ -72,7 +97,7 @@ run_helper_script() {
         return 0
     fi
 
-    dotfiles_log "Running extra bootstrap script $(basename "${script}")"
+    dotfiles_log "Running extra script $(basename "${script}")"
     "${script}"
 }
 
@@ -88,12 +113,12 @@ extra_scripts=(
     "${BASEDIR}/scripts/ubuntu/kind.sh"
 )
 
-if [[ "${RUN_EXTRA_TOOLS:-0}" == "1" ]]; then
+if [[ "${RUN_EXTRA_TOOLS}" == "1" ]]; then
     for script in "${extra_scripts[@]}"; do
         run_helper_script "${script}"
     done
 else
-    dotfiles_log "Skipping extra tool installers. Set RUN_EXTRA_TOOLS=1 to run the language and tooling helpers."
+    dotfiles_log "Skipping extra installers. Use --with-extras or set RUN_EXTRA_TOOLS=1 to run them."
 fi
 
 if command -v fc-cache >/dev/null 2>&1; then
@@ -101,4 +126,4 @@ if command -v fc-cache >/dev/null 2>&1; then
     fc-cache -fv
 fi
 
-dotfiles_log "Bootstrap complete"
+dotfiles_log "Package install complete"

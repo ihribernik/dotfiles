@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$BaseDir = Split-Path -Parent $PSScriptRoot
+$BaseDir = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 . (Join-Path $BaseDir "scripts/common/helpers.ps1")
 
 $wingetPackages = @(
@@ -45,4 +45,4 @@ foreach ($module in $modules) {
     }
 }
 
-Write-DotfilesLog "Bootstrap complete"
+Write-DotfilesLog "Package install complete"

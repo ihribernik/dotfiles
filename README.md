@@ -6,7 +6,7 @@ Cross-platform dotfiles for Ubuntu and Windows with a native installer flow.
 Principles
 ----------
 
-- `bootstrap` installs software, not configs.
+- `scripts/*/install-packages` installs software, not configs.
 - `install` installs configs, not software.
 - Existing files are backed up before replacement.
 - Reapplying the installer is safe.
@@ -15,30 +15,33 @@ Principles
 Repository layout
 -----------------
 
-- `bootstrap/ubuntu.sh`
-- `bootstrap/windows.ps1`
 - `install.sh`
 - `install.ps1`
 - `scripts/common/`
+- `scripts/ubuntu/install-packages.sh`
+- `scripts/windows/install-packages.ps1`
 - `dotfiles/`
 - `local/examples/`
 
 Install
 -------
 
+Recommended:
+
+Use the `setup` script for your platform to run the full flow.
+
 Ubuntu:
 
 ```bash
 git clone <repo>
 cd dotfiles
-./bootstrap/ubuntu.sh
-./install.sh
+./setup.sh
 ```
 
-To include the extra Ubuntu tool helpers:
+Ubuntu with extras and optional configs:
 
 ```bash
-RUN_EXTRA_TOOLS=1 ./bootstrap/ubuntu.sh
+./setup.sh --with-extras --include-optional
 ```
 
 Windows:
@@ -46,19 +49,25 @@ Windows:
 ```powershell
 git clone <repo>
 cd dotfiles
-.\bootstrap\windows.ps1
-.\install.ps1
+.\setup.ps1
 ```
 
-The Windows bootstrap installs the terminal apps used by this repo, including Windows Terminal and WezTerm.
+The Windows package script installs the terminal apps used by this repo, including Windows Terminal and WezTerm.
+
+Advanced:
+
+- Ubuntu packages only: `./scripts/ubuntu/install-packages.sh --with-extras`
+- Ubuntu install only: `./install.sh --include-optional`
+- Windows packages only: `.\scripts\windows\install-packages.ps1`
+- Windows install only: `.\install.ps1 -IncludeOptional`
 
 Optional configs
 ----------------
 
 Optional configs are excluded by default.
 
-- Bash: `./install.sh --include-optional`
-- PowerShell: `.\install.ps1 -IncludeOptional`
+- Ubuntu setup: `./setup.sh --include-optional`
+- Windows setup: `.\setup.ps1 -IncludeOptional`
 
 Today the optional set contains Sublime Text user settings from `dotfiles/User`.
 
