@@ -5,6 +5,7 @@ $BaseDir = Split-Path -Parent $PSScriptRoot
 
 $wingetPackages = @(
     "Microsoft.Powershell",
+    "Microsoft.WindowsTerminal",
     "Git.Git",
     "JanDeDobbeleer.OhMyPosh",
     "BurntSushi.ripgrep.MSVC",
@@ -15,7 +16,8 @@ $wingetPackages = @(
     "LLVM.LLVM",
     "sharkdp.fd",
     "Neovim.Neovim",
-    "lsd-rs.lsd"
+    "lsd-rs.lsd",
+    "wez.wezterm"
 )
 
 Assert-DotfilesCommand -Command "winget"
@@ -28,13 +30,18 @@ foreach ($package in $wingetPackages) {
 $modules = @(
     "posh-git",
     "PSFzf",
-    "Terminal-Icons"
+    "Terminal-Icons",
+    "Microsoft.WinGet.CommandNotFound"
 )
+
+if (Get-Command Set-PSRepository -ErrorAction SilentlyContinue) {
+    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+}
 
 foreach ($module in $modules) {
     if (-not (Get-Module -ListAvailable -Name $module)) {
         Write-DotfilesLog "Installing PowerShell module $module"
-        Install-Module -Name $module -Scope CurrentUser -Force
+        Install-Module -Name $module -Repository PSGallery -Scope CurrentUser -Force -AllowClobber
     }
 }
 

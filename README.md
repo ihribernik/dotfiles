@@ -20,8 +20,6 @@ Repository layout
 - `install.sh`
 - `install.ps1`
 - `scripts/common/`
-- `scripts/ubuntu/verify.sh`
-- `scripts/windows/verify.ps1`
 - `dotfiles/`
 - `local/examples/`
 
@@ -35,7 +33,12 @@ git clone <repo>
 cd dotfiles
 ./bootstrap/ubuntu.sh
 ./install.sh
-./scripts/ubuntu/verify.sh
+```
+
+To include the extra Ubuntu tool helpers:
+
+```bash
+RUN_EXTRA_TOOLS=1 ./bootstrap/ubuntu.sh
 ```
 
 Windows:
@@ -45,8 +48,9 @@ git clone <repo>
 cd dotfiles
 .\bootstrap\windows.ps1
 .\install.ps1
-.\scripts\windows\verify.ps1
 ```
+
+The Windows bootstrap installs the terminal apps used by this repo, including Windows Terminal and WezTerm.
 
 Optional configs
 ----------------
