@@ -2,38 +2,7 @@
 
 set -euo pipefail
 
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
-# shellcheck source=scripts/common/helpers.sh
-source "${BASEDIR}/scripts/common/helpers.sh"
-
-RUN_EXTRA_TOOLS="${RUN_EXTRA_TOOLS:-0}"
-
-while [[ $# -gt 0 ]]; do
-	case "$1" in
-	--with-extras)
-		RUN_EXTRA_TOOLS=1
-		shift
-		;;
-	-h | --help)
-		cat <<'EOF'
-Usage: ./scripts/ubuntu/install-packages.sh [--with-extras]
-
-Installs Ubuntu packages used by these dotfiles.
-
-Options:
-  --with-extras    Also run the optional language and tooling helpers.
-EOF
-		exit 0
-		;;
-	*)
-		dotfiles_error "Unknown argument: $1"
-		;;
-	esac
-done
-
-dotfiles_require_command sudo
-dotfiles_require_command apt-get
 
 packages=(
 	ack-grep
