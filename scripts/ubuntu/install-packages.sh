@@ -26,6 +26,8 @@ packages=(
 	htop
 	jq
 	libnotify-bin
+  npm
+  nodejs
 	luarocks
 	python3-dev
 	python3-pip
