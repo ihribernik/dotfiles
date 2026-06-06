@@ -3,12 +3,13 @@
 set -euo pipefail
 
 
+source "$PWD/scripts/common/helpers.sh"
 
 packages=(
 	ack-grep
 	apt-transport-https
-	bat
 	bash-completion
+	bat
 	build-essential
 	ca-certificates
 	clang
@@ -26,8 +27,6 @@ packages=(
 	htop
 	jq
 	libnotify-bin
-  npm
-  nodejs
 	luarocks
 	python3-dev
 	python3-pip
