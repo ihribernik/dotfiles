@@ -2,8 +2,9 @@
 
 set -euo pipefail
 
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-source "$PWD/scripts/common/helpers.sh"
+source "${BASEDIR}/scripts/common/helpers.sh"
 
 packages=(
 	ack-grep
