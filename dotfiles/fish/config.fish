@@ -23,7 +23,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Long command alert (kept from bash)
-alias alert='notify-send --urgency=low -i (test $status -eq 0; and echo terminal; or echo error) (history | tail -n1 | sed -e "s/^ *[0-9]\+ *//;s/[;&|] *alert$//")'
+# alias alert='notify-send --urgency=low -i (test $status -eq 0; and echo terminal; or echo error) (history | tail -n1 | sed -e "s/^ *[0-9]\+ *//;s/[;&|] *alert$//")'
 
 # Load split files
 set -l fish_dir (dirname (status --current-filename))

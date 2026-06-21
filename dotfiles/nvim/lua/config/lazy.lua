@@ -1,11 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
--- in previous versions uses vim.loop.fs_stat
 if not vim.uv.fs_stat(lazypath) then
-  -- bootstrap lazy.nvim
-  -- stylua: ignore
-  print("cloning lazyvim repo...")
-
   vim.fn.system({
     "git",
     "clone",
@@ -20,7 +14,7 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "nordic" } },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "default" } },
     { import = "lazyvim.plugins.extras.editor.illuminate" },
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.go" },
@@ -36,7 +30,7 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
-  install = { colorscheme = { "tokyonight" } },
+  install = { colorscheme = {} },
   checker = {
     enabled = false,
     notify = false,

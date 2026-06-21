@@ -2,9 +2,10 @@
 
 set -euo pipefail
 
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
-source "${BASEDIR}/scripts/common/helpers.sh"
+source "${DOTFILES_DIR}/common/helpers.sh"
 
 packages=(
 	ack-grep
