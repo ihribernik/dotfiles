@@ -27,34 +27,28 @@ function clear-history(){
 }
 
 
-$IsInteractiveSession = ($Host.Name -eq 'ConsoleHost') -and
-    -not ([Environment]::GetCommandLineArgs() -contains '-Command')
+if (Get-Command git -ErrorAction SilentlyContinue) {
+    Import-Module posh-git -ErrorAction SilentlyContinue
+}
 
-if ($IsInteractiveSession) {
-    # Prompt
-    if (Get-Command git -ErrorAction SilentlyContinue) {
-        Import-Module posh-git -ErrorAction SilentlyContinue
-    }
+if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
+    oh-my-posh init pwsh --config "space" | Invoke-Expression
+}
 
-    if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
-        oh-my-posh init pwsh --config "space" | Invoke-Expression
-    }
+# Icons
+if (Get-Module -ListAvailable Terminal-Icons) {
+    Import-Module -Name Terminal-Icons -ErrorAction SilentlyContinue
+}
 
-    # Icons
-    if (Get-Module -ListAvailable Terminal-Icons) {
-        Import-Module -Name Terminal-Icons -ErrorAction SilentlyContinue
-    }
+if (Get-Module -ListAvailable PSFzf) {
+    Import-Module PSFzf -ErrorAction SilentlyContinue
+    Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+}
 
-    if (Get-Module -ListAvailable PSFzf) {
-        Import-Module PSFzf -ErrorAction SilentlyContinue
-        Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
-    }
+if (Get-Module -ListAvailable Microsoft.WinGet.CommandNotFound) {
+    Import-Module -Name Microsoft.WinGet.CommandNotFound -ErrorAction SilentlyContinue
+}
 
-    if (Get-Module -ListAvailable Microsoft.WinGet.CommandNotFound) {
-        Import-Module -Name Microsoft.WinGet.CommandNotFound -ErrorAction SilentlyContinue
-    }
-
-    if (Get-Command lsd -ErrorAction SilentlyContinue) {
-        Set-Alias ls lsd
-    }
+if (Get-Command lsd -ErrorAction SilentlyContinue) {
+    Set-Alias ls lsd
 }

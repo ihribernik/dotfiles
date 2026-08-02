@@ -3,10 +3,10 @@
 	"in_process_packages": [
   ],
 	"installed_packages": [
-      "Package Control",
       "AutoProjects",
       "EditorConfig",
       "FileIcons",
+      "GitGutter",
       "isort",
       "LSP",
       "LSP-dockerfile",
@@ -21,10 +21,10 @@
       "LSP-typescript",
       "LSP-yaml",
       "Lua Love",
+      "Package Control",
       "PackageDev",
       "SideBarEnhancements",
       "Terminus",
-      "GitGutter",
   ],
     "debug": true,
 }

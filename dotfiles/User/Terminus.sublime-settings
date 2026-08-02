@@ -2,6 +2,9 @@
 	"default_config": {
 		"linux": "Bash",
 		"osx": null,
-		"windows": "PowerShell Core"
+		"windows": "PowerShell Core",
 	},
+	"light_theme": "Adaptive.sublime-theme",
+	"dark_theme": "Adaptive.sublime-theme",
+	"theme": "adaptive",
 }
