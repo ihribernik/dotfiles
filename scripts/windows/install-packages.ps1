@@ -17,7 +17,9 @@ $wingetPackages = @(
     "sharkdp.fd",
     "Neovim.Neovim",
     "lsd-rs.lsd",
-    "wez.wezterm"
+    "wez.wezterm",
+    "ezwinports.make",
+    "Kitware.CMake"
 )
 
 Assert-DotfilesCommand -Command "winget"
