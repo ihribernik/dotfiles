@@ -10,7 +10,11 @@ config.font = wezterm.font_with_fallback({
 })
 config.font_size = 14
 
-config.color_scheme = "Tokyo Night"
+config.default_cursor_style = "BlinkingBlock"
+config.cursor_blink_ease_in = 'Constant'
+config.cursor_blink_ease_out = 'Constant'
+
+config.color_scheme = "nord"
 
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
