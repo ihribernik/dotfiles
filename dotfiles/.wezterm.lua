@@ -4,17 +4,17 @@ local config = wezterm.config_builder()
 
 config.audible_bell = "Disabled"
 
-config.font = wezterm.font_with_fallback({
-	"Hack Nerd Font",
-	"Cascadia Mono",
-})
+-- config.font = wezterm.font_with_fallback({
+-- 	"Hack Nerd Font",
+-- 	"Cascadia Mono",
+-- })
 config.font_size = 14
 
 config.default_cursor_style = "BlinkingBlock"
 config.cursor_blink_ease_in = 'Constant'
 config.cursor_blink_ease_out = 'Constant'
 
-config.color_scheme = "nord"
+-- config.color_scheme = "nord"
 
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
