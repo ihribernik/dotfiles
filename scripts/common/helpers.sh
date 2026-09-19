@@ -2,7 +2,6 @@
 
 set -euo pipefail
 
-DOTFILES_BACKUP_ROOT="${DOTFILES_BACKUP_ROOT:-$HOME/.dotfiles-backups}"
 DOTFILES_RUN_TIMESTAMP="${DOTFILES_RUN_TIMESTAMP:-$(date -u +"%Y%m%dT%H%M%SZ")}"
 
 dotfiles_log() {
@@ -22,12 +21,6 @@ dotfiles_ensure_dir() {
 	mkdir -p "$1"
 }
 
-dotfiles_backup_dir() {
-	local backup_dir="${DOTFILES_BACKUP_ROOT}/${DOTFILES_RUN_TIMESTAMP}"
-	mkdir -p "${backup_dir}"
-	printf '%s\n' "${backup_dir}"
-}
-
 dotfiles_same_link() {
 	local source="$1"
 	local target="$2"
@@ -42,20 +35,6 @@ dotfiles_same_link() {
 	return 1
 }
 
-dotfiles_backup_target() {
-	local target="$1"
-	local backup_dir backup_target
-
-	[[ -e "${target}" || -L "${target}" ]] || return 0
-
-	backup_dir="$(dotfiles_backup_dir)"
-	backup_target="${backup_dir}${target}"
-
-	mkdir -p "$(dirname "${backup_target}")"
-	mv "${target}" "${backup_target}"
-	dotfiles_log "Backed up ${target} to ${backup_target}"
-}
-
 dotfiles_install_link() {
 	local source="$1"
 	local target="$2"
@@ -67,10 +46,6 @@ dotfiles_install_link() {
 	if dotfiles_same_link "${source}" "${target}"; then
 		dotfiles_log "Already linked: ${target}"
 		return 0
-	fi
-
-	if [[ -e "${target}" || -L "${target}" ]]; then
-		dotfiles_backup_target "${target}"
 	fi
 
 	ln -s "${source}" "${target}"
