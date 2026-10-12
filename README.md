@@ -61,16 +61,6 @@ Advanced:
 - Windows packages only: `.\scripts\windows\install-packages.ps1`
 - Windows install only: `.\install.ps1 -IncludeOptional`
 
-Optional configs
-----------------
-
-Optional configs are excluded by default.
-
-- Ubuntu setup: `./setup.sh --include-optional`
-- Windows setup: `.\setup.ps1 -IncludeOptional`
-
-Today the optional set contains Sublime Text user settings from `dotfiles/User`.
-
 Backups
 -------
 

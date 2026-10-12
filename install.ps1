@@ -28,12 +28,5 @@ Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/powershell/user_profi
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/powershell/Microsoft.PowerShell_profile.ps1") -Target (Join-Path $HOME "Documents/PowerShell/Microsoft.PowerShell_profile.ps1")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/windows-terminal/settings.json") -Target (Join-Path $HOME "AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json")
 
-if ($IncludeOptional) {
-    Write-DotfilesLog "Installing optional configs"
-    Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/User") -Target (Join-Path $HOME "AppData/Roaming/Sublime Text 3/Packages/User")
-}
-else {
-    Write-DotfilesLog "Skipping optional configs. Use -IncludeOptional to install them."
-}
 
 Write-DotfilesLog "Install complete"
