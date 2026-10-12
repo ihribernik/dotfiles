@@ -15,7 +15,6 @@ $wingetPackages = @(
     "jqlang.jq",
     "LLVM.LLVM",
     "sharkdp.fd",
-    "Neovim.Neovim",
     "lsd-rs.lsd",
     "wez.wezterm",
     "ezwinports.make",

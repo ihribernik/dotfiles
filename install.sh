@@ -50,7 +50,6 @@ dotfiles_install_link "${BASEDIR}/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
 dotfiles_install_link "${BASEDIR}/dotfiles/bash/.bash_aliases" "$HOME/.bash_aliases"
 dotfiles_install_link "${BASEDIR}/dotfiles/bash/.bash_personal" "$HOME/.bash_personal"
 dotfiles_install_link "${BASEDIR}/dotfiles/bash/.bashrc" "$HOME/.bashrc"
-dotfiles_install_link "${BASEDIR}/dotfiles/nvim" "$HOME/.config/nvim"
 dotfiles_install_link "${BASEDIR}/dotfiles/fish" "$HOME/.config/fish"
 
 if [[ "${INCLUDE_OPTIONAL}" -eq 1 ]]; then

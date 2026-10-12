@@ -24,7 +24,6 @@ Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/git/.gitconfig") -Tar
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/git/.gitconfig_work") -Target (Join-Path $HOME ".gitconfig_work")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/.editorconfig") -Target (Join-Path $HOME ".editorconfig")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/.wezterm.lua") -Target (Join-Path $HOME ".wezterm.lua")
-Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/nvim") -Target (Join-Path $HOME ".config/nvim")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/powershell/user_profile.ps1") -Target (Join-Path $HOME ".config/powershell/user_profile.ps1")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/powershell/Microsoft.PowerShell_profile.ps1") -Target (Join-Path $HOME "Documents/PowerShell/Microsoft.PowerShell_profile.ps1")
 Install-DotfilesLink -Source (Join-Path $BaseDir "dotfiles/windows-terminal/settings.json") -Target (Join-Path $HOME "AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json")
